@@ -40,7 +40,7 @@ public class ReportService {
             e.printStackTrace();
         }
         if(getLocation(ip) != null){
-            report.setLocation(ip);
+            report.setLocation(getLocation(ip));
         }
         else{
             throw new IllegalStateException("Location Not Found");
