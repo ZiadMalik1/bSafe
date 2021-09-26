@@ -39,8 +39,8 @@ public class ReportService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(getLocation("131.94.186.14") != null){
-            report.setLocation("131.94.186.14");
+        if(getLocation(ip) != null){
+            report.setLocation(ip);
         }
         else{
             throw new IllegalStateException("Location Not Found");
@@ -81,7 +81,7 @@ public class ReportService {
 
 
     public void RawDBDemoGeoIPLocationService() throws IOException {
-        File database = new File("/Users/ziad/Desktop/bSafe/bSafeRestAPI/src/main/resources/maxmind/GeoLite2-City.mmdb");
+        File database = new File("/apii/bSafeRestAPI/src/main/resources/maxmind/GeoLite2-City.mmdb");
         dbReader = new DatabaseReader.Builder(database).build();
     }
 
