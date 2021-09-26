@@ -1,12 +1,6 @@
-com/bsafe/bsafe/geolocation/GeoIPLocationServiceImpl.class
-com/bsafe/bsafe/geolocation/GeoIP.class
-com/bsafe/bsafe/report/Report.class
-com/bsafe/bsafe/geolocation/GeoController.class
-com/bsafe/bsafe/geolocation/WebMvcConfig.class
-com/bsafe/bsafe/geolocation/GeoIPLocationService.class
-com/bsafe/bsafe/report/ReportConfig.class
-com/bsafe/bsafe/geolocation/GeoLocationConfig.class
 com/bsafe/bsafe/report/ReportRepository.class
 com/bsafe/bsafe/report/ReportController.class
+com/bsafe/bsafe/report/Report.class
 com/bsafe/bsafe/BSafeApplication.class
 com/bsafe/bsafe/report/ReportService.class
+com/bsafe/bsafe/report/ReportConfig.class
