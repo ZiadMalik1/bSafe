@@ -40,6 +40,7 @@ public class ReportService {
             e.printStackTrace();
         }
         if(getLocation(ip) != null){
+            report.setIp(ip);
             report.setLocation(getLocation(ip));
         }
         else{

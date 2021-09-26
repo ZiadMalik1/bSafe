@@ -25,6 +25,7 @@ public class Report {
     private String description;
     private String location;
     private String timeStamp;
+    private String ip;
     public Report() {
     }
     public Report(String name, String description) {
@@ -32,6 +33,15 @@ public class Report {
         this.description = description;
         this.location = null;
         this.timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+        this.ip = null;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
     public Long getId() {return id;}
