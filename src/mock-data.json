@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "fullName": "Alexi Flores",
+        "location": "3 waterfoot road",
+        "description": "333-962-7516",
+        "additionalinfo": "Armed and dangerous"
+      },
+      {
+        "id": 2,
+        "fullName": "Bianca Villareal",
+        "location": "Southlake, Texas",
+        "description": "Murder in Southlake Town Square",
+        "additionalinfo": "Jose Rodolfo Villarreal-Hernandez is the murderer"
+      },
+      {
+        "id": 3,
+        "fullName": "Tony Frank",
+        "location": "11 lesly road",
+        "description": "788-962-7516",
+        "additionalinfo": "tony.frank@email.com"
+      },
+      {
+        "id": 4,
+        "fullName": "Jeremy Clark",
+        "location": "333 miltown manor",
+        "description": "011-962-111",
+        "additionalinfo": "jeremy.clark@email.com"
+      },
+      {
+        "id": 5,
+        "fullName": "Raymond Edwards",
+        "location": "99 blue acres",
+        "description": "3231-962-7516",
+        "additionalinfo": "raymon.edwards@email.com"
+      }
+]

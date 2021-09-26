@@ -1,0 +1,24 @@
+body{
+  background-color: white;
+  height: 100vh;
+}
+
+header{
+  height: 20 vh;
+
+  display: flex;
+
+  background-color: navy;
+  color: white;
+  font-size: 3em;
+  padding-left: 12em;
+  
+}
+
+img{
+  height: 100px;
+}
+
+.Hello{
+  display: none;
+}
