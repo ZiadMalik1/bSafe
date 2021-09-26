@@ -39,7 +39,10 @@ public class ReportService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        report.setLocation(this.getLocation(ip));
+        String location = this.getLocation(ip);
+        if(location != null){
+            report.setLocation(location);
+        }
         reportRepository.save(report);
     }
 
