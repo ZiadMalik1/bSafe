@@ -2,7 +2,9 @@ package com.bsafe.bsafe.report;
 
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 
 @Entity
@@ -22,23 +24,15 @@ public class Report {
     private String name;
     private String description;
     private String location;
-    private LocalDate timeStamp;
+    private String timeStamp;
     public Report() {
     }
 
-    public Report(Long id, String name, String description, String location, LocalDate timeStamp) {
-        this.id = id;
+    public Report(String name, String description, String location) {
         this.name = name;
         this.description = description;
         this.location = location;
-        this.timeStamp = timeStamp;
-    }
-
-    public Report(String name, String description, String location, LocalDate timeStamp) {
-        this.name = name;
-        this.description = description;
-        this.location = location;
-        this.timeStamp = timeStamp;
+        this.timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
     }
 
     public Long getId() {return id;}
@@ -71,11 +65,11 @@ public class Report {
         this.location = location;
     }
 
-    public LocalDate getTimeStamp() {
+    public String getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(LocalDate timeStamp) {
+    public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
     }
 

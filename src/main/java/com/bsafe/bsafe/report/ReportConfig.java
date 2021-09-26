@@ -13,11 +13,11 @@ public class ReportConfig {
     CommandLineRunner commandLineRunner(ReportRepository repository){
         return args -> {
             Report report1 = new Report("Ziad", "Malik",
-                    "Hello", LocalDate.now());
+                    "Hello");
             Report report2 = new Report("Ziad", "Malik",
-                    "Hello", LocalDate.now());
+                    "Hello");
             Report report3 = new Report("Ziad", "Malik",
-                    "Hello", LocalDate.now());
+                    "Hello");
             repository.saveAll(
                     List.of(report1, report2, report3)
             );
