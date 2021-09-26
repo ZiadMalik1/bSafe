@@ -90,8 +90,7 @@ public class ReportService {
         InetAddress ipAddress = InetAddress.getByName(ip);
         CityResponse response = dbReader.city(ipAddress);
         String Location = "";
-        Location += response.getCity().getName();
-        Location += " " + response.getLocation().getLatitude().toString();
+        Location += response.getLocation().getLatitude().toString();
         Location += " " + response.getLocation().getLongitude().toString();
         return Location;
     }
