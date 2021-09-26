@@ -24,8 +24,9 @@ public class ReportController {
         return service.getReports();
     }
     @PostMapping
-    public void registerNewReport(@RequestBody Report report){
-        service.addNewReport(report);
+    public void registerNewReport(@RequestBody Report report, HttpServletRequest httpServletRequest){
+        String ip = httpServletRequest.getRemoteAddr();
+        service.addNewReport(report, ip);
     }
     @DeleteMapping(path="{reportId}")
     public void deleteReport(@PathVariable("reportId") Long id){

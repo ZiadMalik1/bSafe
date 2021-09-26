@@ -27,11 +27,10 @@ public class Report {
     private String timeStamp;
     public Report() {
     }
-
-    public Report(String name, String description, String location) {
+    public Report(String name, String description) {
         this.name = name;
         this.description = description;
-        this.location = location;
+        this.location = null;
         this.timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
     }
 

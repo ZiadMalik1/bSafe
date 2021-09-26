@@ -1,11 +1,18 @@
 package com.bsafe.bsafe.report;
 
+import com.maxmind.geoip2.DatabaseReader;
+import com.maxmind.geoip2.exception.GeoIp2Exception;
+import com.maxmind.geoip2.model.CityResponse;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -14,6 +21,7 @@ import java.util.List;
 public class ReportService {
 
     private final ReportRepository reportRepository;
+    private DatabaseReader dbReader;
 
     @Autowired
     public ReportService(ReportRepository reportRepository) {
@@ -24,8 +32,14 @@ public class ReportService {
         return reportRepository.findAll();
     }
 
-    public void addNewReport(Report report) {
+    public void addNewReport(Report report, String ip) {
         report.setTimeStamp(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+        try {
+            this.RawDBDemoGeoIPLocationService();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        report.setLocation(this.getLocation(ip));
         reportRepository.save(report);
     }
 
@@ -59,4 +73,23 @@ public class ReportService {
             reportRepository.save(report);
         }
     }
+
+
+    public void RawDBDemoGeoIPLocationService() throws IOException {
+        File database = new File("/Users/ziad/Desktop/bSafe/bSafeRestAPI/src/main/resources/maxmind/GeoLite2-City.mmdb");
+        dbReader = new DatabaseReader.Builder(database).build();
+    }
+
+    @SneakyThrows
+    public String getLocation(String ip)  {
+        InetAddress ipAddress = InetAddress.getByName(ip);
+        CityResponse response = dbReader.city(ipAddress);
+        String Location = "";
+        Location += "City: " + response.getCity().getName();
+        Location += "Latitude: " + response.getLocation().getLatitude().toString();
+        Location += "Longitude: " + response.getLocation().getLongitude().toString();
+        return Location;
+    }
+
+
 }

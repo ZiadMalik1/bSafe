@@ -12,12 +12,9 @@ public class ReportConfig {
     @Bean
     CommandLineRunner commandLineRunner(ReportRepository repository){
         return args -> {
-            Report report1 = new Report("Ziad", "Malik",
-                    "Hello");
-            Report report2 = new Report("Ziad", "Malik",
-                    "Hello");
-            Report report3 = new Report("Ziad", "Malik",
-                    "Hello");
+            Report report1 = new Report("Ziad", "Malik");
+            Report report2 = new Report("Ziad", "Malik");
+            Report report3 = new Report("Ziad", "Malik");
             repository.saveAll(
                     List.of(report1, report2, report3)
             );
