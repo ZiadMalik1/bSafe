@@ -39,9 +39,11 @@ public class ReportService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String location = this.getLocation(ip);
-        if(location != null){
-            report.setLocation(location);
+        if(getLocation(ip) != null){
+            report.setLocation(ip);
+        }
+        else{
+            throw new IllegalStateException("Location Not Found");
         }
         reportRepository.save(report);
     }
