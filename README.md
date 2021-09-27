@@ -12,4 +12,4 @@ Although we weren't able to deploy the app in its final state. We are proud of w
 ## What we learned
 We learned how to work together as a team to deliver a real world product that would be able to make change around the world we live in. This isn't an application made for profit, but an application that makes use of the technologies we have at our disposal today to make the world around us a better place.
 ## What's next for bSafe
-We will Continue to work on bSafe and finish the product as it is a product with great potential. We look to deploy the app to the App Store and the Android Store as well. Connect the Applications together and allow them
+We will Continue to work on **bSafe** and finish the product as it is a product with great potential. We look to deploy the app to the App Store and the Android Store as well. Connect the Applications together and allow them
