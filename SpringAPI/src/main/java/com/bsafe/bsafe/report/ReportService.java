@@ -82,7 +82,7 @@ public class ReportService {
 
 
     public void RawDBDemoGeoIPLocationService() throws IOException {
-        File database = new File("/apii/bSafeRestAPI/src/main/resources/maxmind/GeoLite2-City.mmdb");
+        File database = new File("/api/bSafe/SpringAPI/src/main/resources/maxmind/GeoLite2-City.mmdb");
         dbReader = new DatabaseReader.Builder(database).build();
     }
 
