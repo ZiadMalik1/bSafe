@@ -1,7 +1,7 @@
 import"./Login.css"
 
 function Login(){
-    let show = false;
+    let show = 0;
     var username = '';
     var password = '';
 
@@ -24,11 +24,12 @@ function Login(){
     const handleAddSubmit = (event) => {
         event.preventDefault();
         if(username === '1'){
-            show = true;
+            show = 10;
             console.log(show);
+            console.log(password);
         }
     }
-
+    
     return(
         <div>
             
@@ -60,7 +61,7 @@ function Login(){
                             class="submit-button" 
                             >Login</button>
                     {
-                    show ? <div>WORKS</div> : null
+                    show === 10 ? <div>WORKS</div> : null
                     } 
                     </section>
                 </form>

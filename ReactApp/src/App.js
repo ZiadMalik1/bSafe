@@ -1,6 +1,6 @@
 import './App.css';
-import Information from './Information';
-import Login from './Login.js';
+import Information from './Components/Table/Information.js';
+import Login from './Components/Login/Login.js';
 
 
 

@@ -4,8 +4,8 @@
 
 .info-surround{
     height: auto;
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding-bottom: 21px;
+    padding-left: 21px;
     text-align: left;
 
 }
@@ -43,6 +43,21 @@
   form td:last-child {
     display: flex;
     justify-content: space-evenly;
+  }
+
+  button{
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(117, 201, 250);
+    color: black;
+  }
+
+  input{
+    background-color: rgb(205, 235, 253);
+    color: black;
+    margin: 3px;
+    border: 2px solid;
+    border-color: rgb(117, 201, 250);
   }
 
 

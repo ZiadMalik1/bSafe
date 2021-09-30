@@ -11,7 +11,7 @@ function Information(){
         fullName: '',
         location: '',
         description: '',
-        additionalinfo: "",
+        additionalinfo: '',
     })
 
     const [editTipId, setEditTipId] = useState(null);
@@ -19,7 +19,7 @@ function Information(){
         fullName: '',
         location: '',
         description: '',
-        additionalinfo: "",
+        additionalinfo: '',
     });
 
     const handleAddFormChange = (event) => {
@@ -82,7 +82,7 @@ function Information(){
             setEditTipId(null);
         };
 
-    const handleEditClick = (event, tip ) =>{
+    const handleEditClick = (event,tip) =>{
         event.preventDefault();
         setEditTipId(tip.id);
     
@@ -96,6 +96,7 @@ function Information(){
 
         setEditFormData(formValues);
     }
+
     const handleCancelClick = () => {
         setEditTipId(null);
     }
@@ -104,7 +105,7 @@ function Information(){
         const newTips = [...tips];
     
         const index = tips.findIndex((tip) => tip.id === tipId);
-    
+        
         newTips.splice(index, 1);
     
         setTips(newTips);
@@ -126,7 +127,8 @@ function Information(){
                     <tbody>
                         {tips.map((tip)=>  
                          <Fragment>
-                            {editTipId === tip.id ? (<EditableRow 
+                            {editTipId === tip.id ? (
+                                <EditableRow 
                                 editFormData={editFormData} 
                                 handleEditFormChange={handleEditFormChange}
                                 handleCancelClick={handleCancelClick}/>) : (
@@ -134,8 +136,8 @@ function Information(){
                                 tip={tip} 
                                 handleEditClick={handleEditClick}
                                 handleDeleteClick={handleDeleteClick}/>
-                            )}      
-                        </Fragment>)}
+                            )}          
+                        </Fragment> )}
                     </tbody>
                 </table>
             </form>    

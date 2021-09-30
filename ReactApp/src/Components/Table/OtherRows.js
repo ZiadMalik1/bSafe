@@ -7,8 +7,8 @@ function OtherRows({tip, handleEditClick, handleDeleteClick}){
             <td>{tip.description}</td>
             <td>{tip.additionalinfo}</td>
             <td>
-                <button type="button" onClick={(event)=> handleEditClick(event, tip)}>Edit</button>
-                <button type="button" onClick={(event)=> handleDeleteClick(event, tip)}>Delete</button>
+                <button type="button" onClick={(event)=> handleEditClick(event,tip)}>Edit</button>
+                <button type="button" onClick={()=>handleDeleteClick(tip.id)}>Delete</button>
             </td>
         </tr>
     )
