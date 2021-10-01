@@ -34,7 +34,7 @@ function EditableRow({editFormData , handleEditFormChange, handleCancelClick }) 
                 <input type="text" 
                 required="required"
                 placeholder="additional information..." 
-                name="additionalinformation"
+                name="additionalinfo"
                 value={editFormData.additionalinfo}
                 onChange={handleEditFormChange}></input>
             </td>
